@@ -28,28 +28,31 @@ h1 {
   color: #345883;
   font-size: 30px;
   }
-  @media screen and (min-width:720px) {
+@media screen and (min-width:720px) {
     h1 { font-size:50px; } /* Increase the font size for larger screens*/
   }
+@media screen and (max-width:720px) {
+    img { width:280px; } /* Decrease the size of the images for smaller screens*/
+    }
 h2 {
   font-family: "Playfair Display", serif;
   color: #822534;
   text-transform: capitalize;
   }
 header {
-  margin-bottom:20px;
-  margin-top:40px;
+  padding-bottom:20px;
+  padding-top:40px;
   }
 header h1 {
    padding-bottom: 0px;
-   margin-bottom: 10px;
+   margin-bottom: 20px;
    border-bottom: 5px solid #345883;
    }
-picture {
+figure {
    display: inline-block;
    text-align: center;
    font-size: 11px;
-   padding: 1%;
+   margin: 5px;
    }
 .fltlft {
   float: left;
@@ -60,34 +63,29 @@ picture {
 .clear {
   clear: both;
   }
-
+.center {
+  text-align: center;
+  }
 </style>
 </head>
 
 <body>
 <header>
 <h1>American Impressionism</h1>
-<picture>
-  <source srcset="JSS-Out-of-Doors-360w.jpg"
-       media="(min-width: 720px)">
-  <source srcset="JSS-Out-of-Doors-300w.jpg">
-  <img src="JSS-Out-of-Doors-360w.jpg" width="100%" alt="John Singer Sargent">
+<div class="center"> <!-- Center the Images -->
+<figure>
+  <img src="JSS-Out-of-Doors-360w.jpg" width="360" alt="John Singer Sargent">
   <figcaption>John Singer Sargent: An Out of Doors Study<br>Source: Wikipedia</figcaption>
-</picture>
-<picture>
-   <source srcset="MC-The_Tea-418w.jpg"
-        media="(min-width: 720px)">
-    <source srcset="MC-The_Tea-300w.jpg">
-     <img src="MC-The_Tea-418w.jpg" alt="Mary Cassatt - The Tea" width="100%">
+</figure>
+<figure>
+     <img src="MC-The_Tea-418w.jpg" alt="Mary Cassatt - The Tea" width="418">
 <figcaption>Mary Cassatt: The Tea<br>Source: Wikipedia</figcaption>
-</picture>
-<picture>
-   <source srcset="WL-ElysBridge-335w.jpg"
-        media="(min-width: 720px)">
-    <source srcset="WL-ElysBridge-300w.jpg">
-	<img src="WL-ElysBridge-335w.jpg" alt="William Lathrop" width="100%">
+</figure>
+<figure>
+	<img src="WL-ElysBridge-335w.jpg" alt="William Lathrop" width="335">
 <figcaption>William L. Lathrop: Ely's Bridge<br>Source: Wikipedia</figcaption>
-</picture>
+</figure>
+</div> <!-- End Center the Images -->
 </header>
 <div class="maincontent">
 <p>American Impressionism was a style of painting related to European Impressionism and practiced by American artists in the United States during the late 19th and early 20th centuries. American Impressionism is a style of painting characterized by loose brushwork and vivid colors. An Impressionist painting will often use small dabs of color in order to make the painting distinguishable from afar, but indistinguishable from up close. The style often depicted landscapes mixed with scenes of upper-class domestic life.</p>
