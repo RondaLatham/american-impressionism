@@ -9,44 +9,56 @@
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
-  padding: 0;
-  
+  padding: 0;  
   }
 main {
-  padding-left: 7%;
-  padding-right: 7%;
+  padding-left: 13%;
+  padding-right: 10%;
   padding-bottom: 100px;
   }
-
-h1, h2 {
+h1, h2, h3 {
+  font-family: 'Playfair Display SC', serif;
   font-weight: bold;
   }
-h1 {
-  font-family: 'Playfair Display SC', serif;
-  color: #345883;
-  font-size: 30px;
-  }
-@media screen and (min-width:720px) {
-    h1 { font-size:50px; } /* Increase the font size for larger screens*/
-  }
-@media screen and (max-width:720px) {
-    img { width:280px; } /* Decrease the size of the images for smaller screens*/
-    }
+header h1 {
+   color: #345883;
+   font-size: 27px;
+   padding-bottom: 0px;
+   margin-bottom: 20px;
+   border-bottom: 5px solid #345883;
+   }
 h2 {
-  font-family: "Playfair Display", serif;
   color: #822534;
   text-transform: capitalize;
   }
+header h2 {
+   padding-top: 0px;
+   padding-bottom: 0px;
+   margin-top: -15px;
+   margin-bottom: 20px;
+   font-size: 20px;
+   color: #345883;
+   }
+main h2 {
+   font-size: 23px;
+   padding-top: 20px;
+   margin-left: -25px;
+   padding-bottom: 3px;
+   margin-bottom: 0px;
+   border-bottom: 2px solid #822534;
+   }
 header {
   padding-bottom:20px;
   padding-left: 7%;
   padding-right: 7%;
   }
-header h1 {
-   padding-bottom: 0px;
-   margin-bottom: 20px;
-   border-bottom: 5px solid #345883;
-   }
+@media screen and (min-width:720px) {
+    header h1 { font-size:45px; }
+    header h2 { font-size: 28px; } /* Increase the font size for larger screens*/
+  }
+@media screen and (max-width:720px) {
+    img { width:280px; } /* Decrease the size of the images for smaller screens*/
+    }
 figure {
    display: inline-block;
    text-align: center;
@@ -84,6 +96,38 @@ nav a:hover {
 nav a:active {
    color: #a9afcf;
    }
+footer {
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  background-color: #345883;
+  background: url("images/Background.jpg") bottom center no-repeat;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 0px;
+   }
+footer h3 {
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 3px;
+  font-size: 18px;
+  }  
+.important {
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-right:  10px;
+  padding-left: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #345883;
+  border-right: 4px dotted #345883;
+  border-left: 4px dotted #345883;  
+  }
+.firstparagraph {
+  margin-top: 10px;
+  }
 .fltlft {
   float: left;
   }
