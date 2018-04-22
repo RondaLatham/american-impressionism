@@ -97,6 +97,9 @@ nav a:hover {
 nav a:active {
    color: #a9afcf;
    }
+table {
+  width: 100%;
+  }
 footer {
   font-family: 'Open Sans', sans-serif;
   color: #ffffff;
