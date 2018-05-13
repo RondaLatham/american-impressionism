@@ -38,6 +38,17 @@ h2 {
   color: #822534;
   text-transform: capitalize;
   }
+main h2::before {
+   content: "B";
+   display: inline-block;
+   border:4px solid #822534; 
+   overflow:hidden; 
+   width:0; 
+   height:0; 
+   margin-right: 10px; 
+   border-radius:4px; 
+   vertical-align: 12%;  
+  }
 header h2 {
    padding-top: 0px;
    padding-bottom: 0px;
@@ -104,6 +115,15 @@ nav a:hover {
 nav a:active {
    color: #a9afcf;
    }
+main ul li {
+    list-style-type: none;
+	text-indent: -31px;
+   }
+main ul li::before {
+   content: "\269C";
+   color: #4d970f;
+   padding: 10px;
+}
 table {
   width: 100%;
   }
@@ -135,16 +155,6 @@ footer h3 {
    overflow:hidden; 
    vertical-align: baseline; 
    border-left-color: #345883;
-  }
-.important2 {
-   display: inline-block; 
-   border:4px solid #822534; 
-   overflow:hidden; 
-   width:0; 
-   height:0; 
-   margin-right: 10px; 
-   border-radius:4px; 
-   vertical-align: 12%;
   }
 .firstparagraph {
   margin-top: 10px;
