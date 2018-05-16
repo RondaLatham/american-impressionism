@@ -40,11 +40,9 @@ h2 {
   text-transform: capitalize;
   }
 main h2::before {
-   content: "\00B7";
-   font-size: 40px;
-   padding-right: 6px;
+   content: "\2022";
+   padding-right: 9px;
    margin-left: -15px;
-   vertical-align: -4px;
   /* display: inline-block;
    border:4px solid #822534; 
    overflow:hidden; 
@@ -59,9 +57,9 @@ main h2::before {
    font-size: 21px;
    padding-top: 20px;
    margin-left: 0px;
-   padding-bottom: 0px;
-   margin-bottom: -2px;
-   border-bottom: 2px solid #822534;
+   padding-bottom: 2px;
+   margin-bottom: 5px;
+   border-bottom: 1px solid #822534;
    line-height: 1;
    }
 header h2 {
@@ -79,33 +77,64 @@ header {
   padding-right: 7%;
   }
 @media screen and (min-width:1024px) {
-    .leftcol {
+  .leftcol {
    width: 48%;
    float: left;
-   vertical-align: text-top;
+   padding-right:4%;
    }
-.rightcol {
+  .rightcol {
    width: 48%;
    float: right;
-   margin-top: -7px;
-   padding-top: 0px;
+   margin-top: -6px;
+   }
+   .leftcol img {
+   margin-top: 40px;
+   }
+   .rightcol img {
+   margin-top: 46px;
    }
 }
 @media screen and (min-width:768px) {
     header h1 { font-size:45px; }
     header h2 { font-size: 28px; } /* Increase the font size for larger screens*/
+    .dropdown {display: none;}
+	.dropdown-content {display: none;}
+	.dropdown:hover .dropdown-content {display: none;}
   }
+
 @media screen and (max-width:480px) {
-    img { width:280px;} /* Decrease the size of the images for smaller screens*/
+    img { width:280px;}
+    main img {width:280px; margin: 0 -13px; text-align: center;} /* Decrease the size of the images for smaller screens*/
+     nav {display: none;}
+    .dropdown {
+      position: relative;
+      display: inline-block;}
+	.dropdown-content {
+      display: none;}
+	.dropdown:hover .dropdown-content {
+      display: block;}
     }
+.dropdown-content {
+    position: absolute;
+    font-size: 8px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    padding: 12px 16px;
+    z-index: 1;}    
 figure {
    display: inline-block;
    text-align: center;
    font-size: 11px;
    margin: 5px;
    }
-main figure {
-   padding-top: 15px;
+main figure.right {
+   padding-top: 19px;
+   text-align: center;
+   margin: 0 auto;
+   }
+   main figure.left {
+   padding-top: 13px;
+   text-align: center;
    margin: 0 auto;
    }
 nav {
@@ -154,6 +183,24 @@ main ul li::before {
    color: #4d970f;
    padding: 10px;
 }
+main a:link {
+   color: #822534;
+   font-weight: bold;
+   text-decoration: none;
+   }
+main a:visited {
+   color: #822534;
+   font-weight: 600;
+   text-decoration: none;
+   }
+main a:hover {
+   border-bottom: 2px dotted #822534;
+   padding-bottom: -5px;
+   }
+main a:active {
+   border-bottom: 2px dotted #822534;
+   padding-bottom: -5px;
+   }
 table {
   width: 100%;
   }
@@ -195,6 +242,6 @@ footer h3 {
 .center {
   text-align: center;
   }
-.top  {
+/*.top  {
   transition-delay: 5s
-  }
+  }*/
