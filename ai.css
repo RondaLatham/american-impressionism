@@ -111,7 +111,7 @@ header {
     } /* Decrease the size of the images for screens smaller than 480px wide */
 
 /* At screens smaller than 944px hide the nav bar and show the dropdown menu*/
-@media screen and (max-width:943px) {
+@media only screen and (max-width:943px) {
      nav {display: none;}
     .dropdown {
       position: relative;
