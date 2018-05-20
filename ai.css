@@ -10,11 +10,12 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
   padding: 0; 
-background: #f2f6f9; /* Old browsers */
-background: -moz-linear-gradient(top, #f2f6f9 0%, #ffffff 51%, #f9f4f5 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #f2f6f9 0%,#ffffff 51%,#f9f4f5 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #f2f6f9 0%,#ffffff 51%,#f9f4f5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f9', endColorstr='#f9f4f5',GradientType=0 ); /* IE6-9 */
+  font-size: 13px;
+  background: #f2f6f9; /* Old browsers */
+  background: -moz-linear-gradient(top, #f2f6f9 0%, #ffffff 51%, #f9f4f5 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f2f6f9 0%,#ffffff 51%,#f9f4f5 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f2f6f9 0%,#ffffff 51%,#f9f4f5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f9', endColorstr='#f9f4f5',GradientType=0 ); /* IE6-9 */
 
 }
 main {
@@ -54,11 +55,11 @@ main h2::before {
   }
   main h2 {
     /*font-family: 'Playfair Display', serif;*/
-   font-size: 21px;
+   font-size: 18px;
    padding-top: 20px;
    margin-left: 0px;
    padding-bottom: 2px;
-   margin-bottom: 5px;
+   margin-bottom: 0px;
    border-bottom: 1px solid #822534;
    line-height: 1;
    }
@@ -87,7 +88,6 @@ header {
   .rightcol {
    width: 48%;
    float: right;
-   margin-top: -6px;
    }
    .leftcol img {
    margin-top: 40px;
@@ -96,15 +96,17 @@ header {
    margin-top: 46px;
    }
 }
-@media screen and (min-width:768px) {
+@media only screen and (min-width:768px) {
     header h1 { font-size:45px; }
-    header h2 { font-size: 28px; } /* Increase the font size for larger screens*/
+    header h2 { font-size: 28px; }
+    main h2 {font-size: 21px;}
+    body {font-size: 15px;} /* Increase the font size for larger screens*/
 	}
-@media screen and (min-width:944px) {/* At screens larger than 944px hide the dropdown menu*/
+@media only screen and (min-width:944px) {/* At screens larger than 944px hide the dropdown menu*/
     .dropdown {display:none;}
     .dropdown-content {display:none;}
   }
-@media screen and (max-width:480px) {
+@media only screen and (max-width:480px) {
     img { width:280px;}
     main img {width:280px; margin: 0 -13px; text-align: center;}
     .dropdown img {width: 50px;}
@@ -128,7 +130,8 @@ header {
       margin-left: -7px;
       font-size: 12px;
       background-color: #345883;
-      border-radius: 15px 60px 50px 15px;
+      background-color: rgba(52, 88, 131, .8);
+      border-radius: 3px;
       padding-bottom: 10px;
       padding-left: 10px;
       color: #ffffff;
@@ -162,17 +165,18 @@ figure {
    margin: 5px;
    }
 main figure.right {
-   padding-top: 19px;
+   padding-top: 13px;
    text-align: center;
    margin: 0 auto;
    }
    main figure.left {
-   padding-top: 13px;
+   padding-top: 20px;
    text-align: center;
    margin: 0 auto;
    }
 nav {
   background-color: #345883;
+  background-color: rgba(01, 42, 90, .8);
   color: #a9afcf;
   text-transform: uppercase;
   font-size: 12px;
@@ -261,9 +265,9 @@ footer h3 {
 	color: #345883;
 	font-weight: bold;
   }
-.firstparagraph {
+/*.firstparagraph {
   margin-top: 10px;
-  }
+  }*/
 .fltlft {
   float: left;
   }
