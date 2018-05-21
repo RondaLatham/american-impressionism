@@ -109,7 +109,7 @@ header {
 @media only screen and (max-width:480px) {
     img { width:280px;}
     main img {width:280px; margin: 0 -13px; text-align: center;}
-    .dropdown img {width: 50px;}
+    .dropdown img {width: 35px; height: 25px;}
     } /* Decrease the size of the images for screens smaller than 480px wide */
 
 /* At screens smaller than 944px hide the nav bar and show the dropdown menu*/
