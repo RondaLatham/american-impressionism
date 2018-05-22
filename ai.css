@@ -10,7 +10,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
   padding: 0; 
-  font-size: 14px;
+  font-size: 16px;
   background: #f2f6f9; /* Old browsers */
   background: -moz-linear-gradient(top, #f2f6f9 0%, #ffffff 51%, #f9f4f5 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #f2f6f9 0%,#ffffff 51%,#f9f4f5 100%); /* Chrome10-25,Safari5.1-6 */
@@ -114,7 +114,6 @@ header {
 /* At screens smaller than 944px hide the nav bar and show the dropdown menu*/
 /* At screens smaller than 944px set the font size to 14px*/
 @media only screen and (max-width:943px) {
-     body {font-size: 15px;}
      nav {display: none;}
     .dropdown {
       position: relative;
