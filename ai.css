@@ -140,9 +140,6 @@ header {
 	.dropdown:hover .dropdown-content {
       display: block;
       color: #a9afcf;}
-    .dropdown:active .dropdown-content {
-      display: none;
-      color: #a9afcf;}
     .dropdown-content ul {
     padding: 10px 10px;
       margin: 0px 0px 0px -10px;
