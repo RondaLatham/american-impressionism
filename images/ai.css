@@ -1,0 +1,283 @@
+/*
+    stylesheet for American Impressionism
+*/
+/*
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Playfair Display SC', serif;
+    font-family: 'Playfair Display', serif;
+*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  padding: 0; 
+  font-size: 14px;
+  background: #f2f6f9; /* Old browsers */
+  background: -moz-linear-gradient(top, #f2f6f9 0%, #ffffff 51%, #f9f4f5 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f2f6f9 0%,#ffffff 51%,#f9f4f5 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f2f6f9 0%,#ffffff 51%,#f9f4f5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f9', endColorstr='#f9f4f5',GradientType=0 ); /* IE6-9 */
+
+}
+main {
+  padding-left: 13%;
+  padding-right: 13%;
+  padding-bottom: 100px;
+  }
+h1, h2, h3 {
+  font-family: 'Playfair Display SC', serif;
+  font-weight: bold;
+  }
+header h1 {
+   color: #345883;
+   color: rgba(52, 88, 131, 1);
+   font-size: 27px;
+   padding-top: 25px;
+   padding-bottom: 0px;
+   margin-bottom: 20px;
+   border-bottom: 5px solid #345883;
+   }
+h2 {
+  color: #822534;
+  text-transform: capitalize;
+  }
+main h2::before {
+   content: "\2022";
+   padding-right: 9px;
+   margin-left: -15px;
+
+  }
+  main h2 {
+    /*font-family: 'Playfair Display', serif;*/
+   font-size: 18px;
+   padding-top: 20px;
+   margin-left: 0px;
+   padding-bottom: 2px;
+   margin-bottom: 0px;
+   border-bottom: 1px solid #822534;
+   line-height: 1;
+   }
+header h2 {
+   padding-top: 0px;
+   padding-bottom: 0px;
+   margin-top: -15px;
+   margin-bottom: 20px;
+   font-size: 20px;
+   color: #345883;
+   }
+a {
+  outline: 0;
+  }
+header {
+  padding-bottom:20px;
+  padding-left: 7%;
+  padding-right: 7%;
+  }
+@media screen and (min-width:1024px) {
+  .leftcol {
+   width: 48%;
+   float: left;
+   padding-right:4%;
+   }
+  .rightcol {
+   width: 48%;
+   float: right;
+   }
+   .leftcol img {
+   margin-top: 40px;
+   }
+   .rightcol img {
+   margin-top: 46px;
+   }
+}
+@media only screen and (min-width:768px) {
+    header h1 { font-size:45px; }
+    header h2 { font-size: 28px; }
+    main h2 {font-size: 21px;}
+    body {font-size: 16px;} /* Increase the font size for larger screens*/
+	}
+@media only screen and (min-width:944px) {/* At screens larger than 944px hide the dropdown menu*/
+    .dropdown {display:none;}
+    .dropdown-content {display:none;}
+    main img {width:380px; text-align: center;}
+  }
+@media only screen and (max-width:944px) {
+    img { width:310px;}
+    main img {width:310px; margin: 0 -13px; text-align: center;}
+    .dropdown img {width: 35px; height: 25px;}
+  }
+@media only screen and (max-width:480px) {
+    img { width:280px;}
+    main img {width:280px; margin: 0 -13px; text-align: center;}
+    .dropdown img {width: 35px; height: 25px;}
+    } /* Decrease the size of the images for screens smaller than 480px wide */
+
+/* At screens smaller than 944px hide the nav bar and show the dropdown menu*/
+/* At screens smaller than 944px set the font size to 14px*/
+@media only screen and (max-width:943px) {
+     body {font-size: 15px;}
+     nav {display: none;}
+    .dropdown {
+      position: relative;
+      padding-left: 10px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      display: inline-block;}
+	.dropdown-content {
+      display: none;
+      position: absolute;
+      margin-top: -24px;
+      margin-left: -7px;
+      font-size: 13px;
+      background-color: #345883;
+      background-color: rgba(01, 42, 90, .8);
+      border-radius: 3px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      color: #ffffff;
+      z-index: 1;}
+	.dropdown:hover .dropdown-content {
+      display: block;
+      color: #a9afcf;}
+    .dropdown-content ul {
+    padding: 10px 10px;
+      margin: 0px 0px 0px -10px;
+      min-width: 160px;}
+     .dropdown-content a:link {
+       color: white; text-decoration: none;}
+       .dropdown-content a:visited {
+        color: #ffffff; }
+    .dropdown-content a:hover {
+      color: #a9afcf;
+      text-decoration: none;}
+    .dropdown-content a:active {
+   color: #a9afcf;}
+   .dropdown-content li {
+     list-style-type: none;
+     padding-top: 5px;
+     padding-bottom: 5px;}
+    }
+   
+figure {
+   display: inline-block;
+   text-align: center;
+   font-size: 12px;
+   margin: 5px;
+   }
+main figure.right {
+   padding-top: 12px;
+   }
+   main figure.left {
+   padding-top: 19px;
+   }
+nav {
+  background-color: #345883;
+  background-color: rgba(01, 42, 90, .8);
+  color: #a9afcf;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: right;
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index:99; 
+  }
+nav ul {
+   padding: 0px;
+   margin: 0 auto;
+   text-align: center;
+  }
+nav li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 8px 20px 5px 20px;
+  }
+nav a:link {
+  color: #ffffff;
+  text-decoration: none;
+  }
+nav a:visited {
+   color: #ffffff;
+   }
+nav a:hover {
+  color: #a9afcf;
+  text-decoration: none;
+  }
+nav a:active {
+   color: #a9afcf;
+   }
+main ul li {
+    list-style-type: none;
+	text-indent: -31px;
+   }
+main ul li::before {
+   content: "\269C";
+   font-size: 20px;
+   color: #4d970f;
+   padding: 10px;
+}
+main a:link {
+   color: #822534;
+   font-weight: bold;
+   text-decoration: none;
+   }
+main a:visited {
+   color: #822534;
+   font-weight: 600;
+   text-decoration: none;
+   }
+main a:hover {
+   border-bottom: 2px dotted #822534;
+   padding-bottom: -5px;
+   }
+main a:active {
+   border-bottom: 2px dotted #822534;
+   padding-bottom: -5px;
+   }
+table {
+  width: 100%;
+  }
+footer {
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  background-color: #345883;
+  background: url("images/Background.jpg") bottom center no-repeat;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 0px;
+   }
+footer h3 {
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 3px;
+  font-size: 18px;
+  }  
+.important {
+	font-size:15px;
+	color: #345883;
+	font-weight: bold;
+  }
+/*.firstparagraph {
+  margin-top: 10px;
+  }*/
+.fltlft {
+  float: left;
+  }
+.fltrt {
+   float: right;
+   }
+.clear {
+  clear: both;
+  }
+.center {
+  text-align: center;
+  margin: 0 auto;
+  }
+/*.top  {
+  transition-delay: 5s
+  }*/
