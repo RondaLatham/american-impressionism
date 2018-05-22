@@ -10,7 +10,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
   padding: 0; 
-  font-size: 13px;
+  font-size: 14px;
   background: #f2f6f9; /* Old browsers */
   background: -moz-linear-gradient(top, #f2f6f9 0%, #ffffff 51%, #f9f4f5 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #f2f6f9 0%,#ffffff 51%,#f9f4f5 100%); /* Chrome10-25,Safari5.1-6 */
@@ -44,14 +44,7 @@ main h2::before {
    content: "\2022";
    padding-right: 9px;
    margin-left: -15px;
-  /* display: inline-block;
-   border:4px solid #822534; 
-   overflow:hidden; 
-   width:0; 
-   height:0; 
-   margin-right: 10px; 
-   border-radius:4px; 
-   vertical-align: 12%; */
+
   }
   main h2 {
     /*font-family: 'Playfair Display', serif;*/
@@ -100,7 +93,7 @@ header {
     header h1 { font-size:45px; }
     header h2 { font-size: 28px; }
     main h2 {font-size: 21px;}
-    body {font-size: 15px;} /* Increase the font size for larger screens*/
+    body {font-size: 16px;} /* Increase the font size for larger screens*/
 	}
 @media only screen and (min-width:944px) {/* At screens larger than 944px hide the dropdown menu*/
     .dropdown {display:none;}
@@ -128,7 +121,7 @@ header {
       position: absolute;
       margin-top: -24px;
       margin-left: -7px;
-      font-size: 12px;
+      font-size: 13px;
       background-color: #345883;
       background-color: rgba(01, 42, 90, .8);
       border-radius: 3px;
@@ -161,18 +154,14 @@ header {
 figure {
    display: inline-block;
    text-align: center;
-   font-size: 11px;
+   font-size: 12px;
    margin: 5px;
    }
 main figure.right {
-   padding-top: 13px;
-   text-align: center;
-   margin: 0 auto;
+   padding-top: 12px;
    }
    main figure.left {
-   padding-top: 20px;
-   text-align: center;
-   margin: 0 auto;
+   padding-top: 19px;
    }
 nav {
   background-color: #345883;
@@ -279,6 +268,7 @@ footer h3 {
   }
 .center {
   text-align: center;
+  margin: 0 auto;
   }
 /*.top  {
   transition-delay: 5s
