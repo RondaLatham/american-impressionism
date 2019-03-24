@@ -1,0 +1,131 @@
+/* for images within columns, make the width 90% and padding below the caption 20px */
+@media screen and (min-width:964px) {
+   .leftcol img {
+   margin-top: 40px;
+   width: 90%;
+   max-width: 90%;
+   }
+   .rightcol img {
+   margin-top: 46px;
+   width: 90%;
+   max-width: 90%;
+   }
+   main figcaption {padding-bottom: 20px; }
+}
+/* ----- Add Header Images to the Body as they are removed from the header ----- */
+
+/* for screens larger than 1085px do not display figure sections F4, F5 or F6*/
+@media only screen and (min-width:1086px) {
+#F4 { display:none; }
+#F5 { display:none; }
+#F6 { display:none; }
+}
+
+/* for screens larger than 964px and smaller than 1085px do not display figure sections F4 and F6, but DO display figure section F5 */
+@media only screen and (min-width:964px) and (max-width:1085px) {
+#F4 { display:none; }
+#F6 { display:none; }
+}
+
+/* for screens larger than 791px and smaller than 963px do not display figure sections F5 and F6, but DO display figure section F4 */
+@media only screen and (min-width:791px) and (max-width:963px) {
+#F5 { display:none; }
+#F6 { display:none; }
+}
+
+@media only screen and (max-width: 790px) {
+#F5 { display:none; }
+}
+/* -------- Decreasing the size of the header images as the screen gets smaller, and going from 3 images, to 2 images, to one image in the header ----------------*/
+
+/* Decrease the header image size to 90% for screens smaller than 1343px */
+@media only screen and (max-width:1342px) {
+#I1 { width:329px; }
+#I2 { width:354px; }
+#I3 { width:258px; }
+}
+
+/* Decrease the header image size to 80% for screens smaller than 1216px */
+@media only screen and (max-width:1215px) {
+#I1 { width:293px; }
+#I2 { width:314px; }
+#I3 { width:230px; }
+}
+
+/* Remove F3/I3 from the header and change the header image size to 85% for screens smaller than 1085px */
+@media only screen and (max-width:1085px) {
+#I1 { width:342px; }
+#I2 { width:367px; }
+#F3 { display: none; } /* The figure section with image I3 is not displayed */
+}
+
+/* Remove I3 from the header and change the header image size to 84% for screens smaller than 1085px */
+@media only screen and (max-width:963px) {
+#I1 { width:311px; }
+#I2 { width:334px; }
+#F3 { display:none; }
+.leftcol img {
+   width: 60%;
+   max-width: 60%;
+   overflow: hidden;
+   }
+.rightcol img {
+   width: 60%;
+   max-width: 60%;
+   overflow: hidden;
+   }
+}
+
+@media only screen and (max-width:790px) {
+#I2 { width:70%; }
+#F1 { display:none; }
+#F3 { display:none; }
+.leftcol img {
+   width: 75%;
+   max-width: 75%;
+   overflow: hidden;
+   }
+.rightcol img {
+   width: 75%;
+   max-width: 75%;
+   overflow: hidden;
+   }
+}
+
+@media only screen and (max-width:662px) {
+#I2 { width:80%; }
+#F1 {display:none; }
+#F3 {display:none; }
+.leftcol img {
+   width: 90%;
+   max-width: 90%;
+   overflow: hidden;
+   }
+.rightcol img {
+   width: 90%;
+   max-width: 90%;
+   overflow: hidden;
+   }
+}
+
+@media only screen and (max-width:400px) {
+#I2 { width:98%; }
+#F1 {display:none; }
+#F3 {display:none; }
+.leftcol img {
+   width: 100%;
+   max-width: 100%;
+   overflow: hidden;
+   }
+.rightcol img {
+   width: 100%;
+   max-width: 100%;
+   overflow: hidden;
+   }
+}
+@media only screen and (max-width:350px) {
+#I2 { width:280px; }
+#F1 {display:none; }
+#F3 {display:none; }
+main img { width: 280px;}
+}

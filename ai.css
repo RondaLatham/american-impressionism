@@ -30,9 +30,11 @@ h1, h2, h3 {
 header h1 {
    color: #345883;
    color: rgba(52, 88, 131, 1);
-   font-size: 27px;
-   padding-top: 25px;
-   padding-bottom: 0px;
+   font-size: 35px;
+   padding-top: 0px;
+   margin-top: 0px;
+   line-height: 1;
+   padding-bottom: 5px;
    margin-bottom: 20px;
    border-bottom: 5px solid #345883;
    }
@@ -40,28 +42,23 @@ h2 {
   color: #822534;
   text-transform: capitalize;
   }
-main h2::before {
-   content: "\2022";
-   padding-right: 9px;
-   margin-left: -15px;
-
-  }
   main h2 {
     /*font-family: 'Playfair Display', serif;*/
    font-size: 18px;
-   padding-top: 20px;
+   padding-top: 10px;
    margin-left: 0px;
    padding-bottom: 2px;
    margin-bottom: 0px;
    border-bottom: 1px solid #822534;
    line-height: 1;
+   overflow: hidden;
    }
 header h2 {
    padding-top: 0px;
    padding-bottom: 0px;
    margin-top: -15px;
    margin-bottom: 20px;
-   font-size: 20px;
+   font-size: 25px;
    color: #345883;
    }
 a {
@@ -72,48 +69,40 @@ header {
   padding-left: 7%;
   padding-right: 7%;
   }
-@media screen and (min-width:1024px) {
+
+/* Create columns for screens larger than 964px */
+@media screen and (min-width:964px) {
   .leftcol {
-   width: 48%;
+   width: 46%;
    float: left;
    padding-right:4%;
    }
   .rightcol {
-   width: 48%;
+   width: 46%;
    float: right;
-   }
-   .leftcol img {
-   margin-top: 40px;
-   }
-   .rightcol img {
-   margin-top: 46px;
+   padding-left: 4%;
    }
 }
-@media only screen and (min-width:768px) {
-    header h1 { font-size:45px; }
-    header h2 { font-size: 28px; }
-    main h2 {font-size: 21px;}
-    body {font-size: 16px;} /* Increase the font size for larger screens*/
-	}
-@media only screen and (min-width:944px) {/* At screens larger than 944px hide the dropdown menu*/
+/* Remove the columns for screens smaller than 964px. */
+@media screen and (max-width: 963px) {
+  .leftcol {
+   width: 100%;
+   clear: none;
+   padding-right:0%;
+   }
+  .rightcol {
+   width: 100%;
+   clear: none;
+   padding-right:0%;
+   }
+}
+/* At screens larger than 964px hide the dropdown menu*/
+@media only screen and (min-width:964px) {
     .dropdown {display:none;}
     .dropdown-content {display:none;}
-    main img {width:380px; text-align: center;}
   }
-@media only screen and (max-width:944px) {
-    img { width:310px;}
-    main img {width:310px; margin: 0 -13px; text-align: center;}
-    .dropdown img {width: 35px; height: 25px;}
-  }
-@media only screen and (max-width:480px) {
-    img { width:280px;}
-    main img {width:280px; margin: 0 -13px; text-align: center;}
-    .dropdown img {width: 35px; height: 25px;}
-    } /* Decrease the size of the images for screens smaller than 480px wide */
-
-/* At screens smaller than 944px hide the nav bar and show the dropdown menu*/
-/* At screens smaller than 944px set the font size to 14px*/
-@media only screen and (max-width:943px) {
+/* At screens smaller than 964px hide the nav bar and show the dropdown menu*/
+@media only screen and (max-width:963px) {
      nav {display: none;}
     .dropdown {
       position: relative;
@@ -156,8 +145,24 @@ header {
      list-style-type: none;
      padding-top: 5px;
      padding-bottom: 5px;}
+   header h1 {padding-top: 25px; }
     }
    
+    /* Increase the font size for screens larger than 963px*/
+@media only screen and (min-width:964px) {
+    header h1 { font-size:45px; padding-top:35px; margin-top: 35px;}
+    header h2 { font-size: 28px; }
+    main h2 {font-size: 21px;}
+    body {font-size: 16px;} 
+	}
+/* Make the hamburger icon smaller */
+@media only screen and (max-width:662px) {
+.dropdown img {width: 35px; height: 25px;}
+header h1 { font-size: 30px;}
+header h2 { font-size: 23px; }
+}
+/* End media queries */
+
 figure {
    display: inline-block;
    text-align: center;
@@ -170,6 +175,10 @@ main figure.right {
    main figure.left {
    padding-top: 19px;
    }
+  .leftcol figcaption {padding-bottom: 10px; 
+   }
+ .rightcol figcaption {padding-bottom: 10px; 
+   }
 nav {
   background-color: #345883;
   background-color: rgba(01, 42, 90, .8);
@@ -181,7 +190,8 @@ nav {
   top:0;
   right:0;
   left:0;
-  z-index:99; 
+  z-index:99;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
   }
 nav ul {
    padding: 0px;
@@ -192,6 +202,7 @@ nav li {
   display: inline-block;
   list-style-type: none;
   padding: 8px 20px 5px 20px;
+
   }
 nav a:link {
   color: #ffffff;
@@ -260,9 +271,6 @@ footer h3 {
 	color: #345883;
 	font-weight: bold;
   }
-/*.firstparagraph {
-  margin-top: 10px;
-  }*/
 .fltlft {
   float: left;
   }
@@ -276,6 +284,5 @@ footer h3 {
   text-align: center;
   margin: 0 auto;
   }
-/*.top  {
-  transition-delay: 5s
-  }*/
+
+
